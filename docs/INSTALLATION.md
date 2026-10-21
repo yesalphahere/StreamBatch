@@ -37,7 +37,7 @@ Before installing StreamBatch, verify that your machine has the following depend
 
 ### Step 1: Clone or Download the Repository
 ```powershell
-git clone https://github.com/your-username/StreamBatch.git
+git clone https://github.com/yesalphahere/StreamBatch.git
 cd StreamBatch
 ```
 
