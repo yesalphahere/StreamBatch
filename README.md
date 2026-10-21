@@ -88,7 +88,7 @@ StreamBatch focuses on format compatibility and convenient offline playback, rat
 
 ```powershell
 # Clone the repository
-git clone https://github.com/your-username/StreamBatch.git
+git clone https://github.com/yesalphahere/StreamBatch.git
 cd StreamBatch
 
 # Install dependencies
@@ -152,6 +152,6 @@ See the [Roadmap](docs/ROADMAP.md) for planned improvements.
 
 ## License
 
-No license has been assigned to this repository yet. Until one is selected, do not assume that the project is available for unrestricted reuse, modification, or redistribution.
+## License
 
-Third-party dependencies have their own licenses. Review their respective licensing terms before distributing the application.
+StreamBatch is released under the MIT License, allowing others to use, modify, and distribute the software in accordance with its terms. See the [LICENSE](LICENSE) file for the full license text.
