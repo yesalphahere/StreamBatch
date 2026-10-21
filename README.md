@@ -1,12 +1,10 @@
+# StreamBatch
+
 <p align="center">
   <img src="assets/branding/banner.png" alt="StreamBatch — Secure Media Automation Engine" width="100%"/>
 </p>
 
-# StreamBatch
 
-<p align="center">
-  <img src="assets/branding/streambatch_banner.svg" alt="StreamBatch Banner" width="100%" />
-</p>
 
 <p align="center">
   <strong>Desktop Media Retrieval, Playlist Automation &amp; Batch Audio Transcoding Engine</strong>
