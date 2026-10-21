@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" width="100%" height="100%">
+  <defs>
+    <style>
+      .title { font-family: 'Segoe UI', -apple-system, sans-serif; font-size: 15px; font-weight: 700; fill: #ffffff; }
+      .desc { font-family: 'Segoe UI', -apple-system, sans-serif; font-size: 11px; fill: #94a3b8; }
+      .box { rx: 8px; stroke-width: 1.5px; }
+      .arrow { stroke: #00a8ff; stroke-width: 2px; marker-end: url(#arrowhead); fill: none; }
+      .sec-arrow { stroke: #64748b; stroke-width: 1.5px; stroke-dasharray: 4 3; marker-end: url(#sec-arrowhead); fill: none; }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#00a8ff" />
+    </marker>
+    <marker id="sec-arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="960" height="520" fill="#13151b" rx="10" />
+
+  <!-- Section 1: Ingestion & Browser Integration -->
+  <g transform="translate(30, 40)">
+    <rect width="250" height="440" fill="#181b24" stroke="#2d3748" class="box" />
+    <text x="20" y="32" class="title">1. Ingestion Layer</text>
+    <text x="20" y="50" class="desc">Link capture &amp; external triggers</text>
+
+    <!-- Browser Extension Box -->
+    <rect x="20" y="75" width="210" height="90" fill="#202532" stroke="#3b4252" class="box" />
+    <text x="35" y="105" class="title" font-size="13">Manifest V3 Extension</text>
+    <text x="35" y="125" class="desc">• Context menu link grabber</text>
+    <text x="35" y="142" class="desc">• Popup format selector</text>
+
+    <!-- Native Host Box -->
+    <rect x="20" y="180" width="210" height="80" fill="#202532" stroke="#3b4252" class="box" />
+    <text x="35" y="210" class="title" font-size="13">Native Messaging Host</text>
+    <text x="35" y="230" class="desc">• Stdio 32-bit length prefix</text>
+    <text x="35" y="247" class="desc">• Windows registry connector</text>
+
+    <!-- Local IPC Server Box -->
+    <rect x="20" y="280" width="210" height="90" fill="#1a2f4c" stroke="#0078d4" class="box" />
+    <text x="35" y="310" class="title" font-size="13">Local HTTP Server</text>
+    <text x="35" y="330" class="desc">• 127.0.0.1:9654 (Loopback)</text>
+    <text x="35" y="347" class="desc">• Scheme-validated POST /add</text>
+
+    <!-- User Clipboard / Manual Input -->
+    <rect x="20" y="385" width="210" height="70" fill="#202532" stroke="#3b4252" class="box" />
+    <text x="35" y="415" class="title" font-size="13">Direct Manual Input</text>
+    <text x="35" y="435" class="desc">• Clipboard auto-detection</text>
+  </g>
+
+  <!-- Section 2: Application UI & Orchestration -->
+  <g transform="translate(320, 40)">
+    <rect width="320" height="440" fill="#181b24" stroke="#2d3748" class="box" />
+    <text x="20" y="32" class="title">2. Core &amp; Presentation</text>
+    <text x="20" y="50" class="desc">Non-blocking PySide6 Qt GUI</text>
+
+    <!-- GUI Window & Dialogs -->
+    <rect x="20" y="75" width="280" height="150" fill="#202532" stroke="#3b4252" class="box" />
+    <text x="35" y="105" class="title" font-size="13">PySide6 Main Window</text>
+    <text x="35" y="125" class="desc">• Active Queue &amp; History Tab Widgets</text>
+    <text x="35" y="142" class="desc">• Add Dialog with Playlist Checklist</text>
+    <text x="35" y="159" class="desc">• Settings Dialog (Concurrency &amp; FFmpeg)</text>
+    <text x="35" y="176" class="desc">• Custom Table Delegates (Pills, Bars)</text>
+    <text x="35" y="200" class="desc" fill="#00a8ff">Signal / Slot Thread Boundary</text>
+
+    <!-- Queue Manager & Thread Pool -->
+    <rect x="20" y="250" width="280" height="170" fill="#222b3d" stroke="#0078d4" class="box" />
+    <text x="35" y="280" class="title" font-size="13">Queue Manager (Thread Pool)</text>
+    <text x="35" y="300" class="desc">• QThreadPool (Configurable 1-10 slots)</text>
+    <text x="35" y="318" class="desc">• Job States: QUEUED, ACTIVE, PAUSED</text>
+    <text x="35" y="336" class="desc">• Throttled Progress Signals (10 Hz)</text>
+    <text x="35" y="354" class="desc">• Non-blocking worker cancellations</text>
+    <text x="35" y="380" class="desc" fill="#34d399">✓ Keeps GUI at smooth 60 FPS</text>
+  </g>
+
+  <!-- Section 3: Processing & Persistence -->
+  <g transform="translate(680, 40)">
+    <rect width="250" height="440" fill="#181b24" stroke="#2d3748" class="box" />
+    <text x="20" y="32" class="title">3. Engine &amp; Storage</text>
+    <text x="20" y="50" class="desc">Execution, transcode &amp; persistence</text>
+
+    <!-- Engine Box -->
+    <rect x="20" y="75" width="210" height="110" fill="#202532" stroke="#3b4252" class="box" />
+    <text x="35" y="105" class="title" font-size="13">Media Retrieval</text>
+    <text x="35" y="125" class="desc">• yt-dlp Python API</text>
+    <text x="35" y="142" class="desc">• Shallow flat playlist parser</text>
+    <text x="35" y="159" class="desc">• Byte-resuming .part chunks</text>
+
+    <!-- FFmpeg Box -->
+    <rect x="20" y="200" width="210" height="110" fill="#202532" stroke="#3b4252" class="box" />
+    <text x="35" y="230" class="title" font-size="13">FFmpeg Transcoder</text>
+    <text x="35" y="250" class="desc">• MP3, M4A, FLAC, WAV, AAC</text>
+    <text x="35" y="267" class="desc">• 128k to 320k Bitrate Profiles</text>
+    <text x="35" y="284" class="desc">• Metadata &amp; Tag Embedding</text>
+
+    <!-- SQLite WAL Box -->
+    <rect x="20" y="325" width="210" height="130" fill="#13271d" stroke="#166534" class="box" />
+    <text x="35" y="355" class="title" font-size="13" fill="#4ade80">SQLite WAL Database</text>
+    <text x="35" y="375" class="desc">• Thread-safe persistent queue</text>
+    <text x="35" y="392" class="desc">• Duplicate URL indexing</text>
+    <text x="35" y="409" class="desc">• Historical completed logs</text>
+    <text x="35" y="426" class="desc">• Crash-recovery state reset</text>
+  </g>
+
+  <!-- Inter-Component Arrows -->
+  <path d="M230 325 L340 325" class="arrow" />
+  <path d="M460 225 L460 250" class="arrow" />
+  <path d="M600 330 L700 130" class="arrow" />
+  <path d="M785 185 L785 200" class="arrow" />
+  <path d="M600 370 L700 370" class="arrow" />
+</svg>

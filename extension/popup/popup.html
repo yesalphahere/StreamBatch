@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StreamBatch</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <span class="logo-dot"></span>
+      <h3>StreamBatch</h3>
+    </div>
+    <div id="status-indicator" class="status-badge checking">Checking...</div>
+  </div>
+
+  <div class="content">
+    <label for="page-url">Page Media URL</label>
+    <input type="text" id="page-url" placeholder="https://..." readonly />
+
+    <div class="row">
+      <div class="col">
+        <label for="format-select">Format</label>
+        <select id="format-select">
+          <option value="mp3" selected>MP3 Audio</option>
+          <option value="m4a">M4A Audio</option>
+          <option value="flac">FLAC Lossless</option>
+          <option value="wav">WAV Lossless</option>
+          <option value="best_audio">Best Audio</option>
+          <option value="video_best">Best Video</option>
+          <option value="video_1080p">1080p Video</option>
+        </select>
+      </div>
+      <div class="col">
+        <label for="quality-select">Audio Quality</label>
+        <select id="quality-select">
+          <option value="320" selected>320 kbps</option>
+          <option value="256">256 kbps</option>
+          <option value="192">192 kbps</option>
+          <option value="128">128 kbps</option>
+          <option value="0">Source / Best</option>
+        </select>
+      </div>
+    </div>
+
+    <button id="send-btn" class="btn primary">Download with StreamBatch</button>
+    <div id="feedback-msg" class="msg"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

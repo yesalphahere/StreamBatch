@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" width="100%" height="100%">
+  <defs>
+    <style>
+      .win-title { font-family: 'Segoe UI', sans-serif; font-size: 12px; fill: #94a3b8; }
+      .bar-btn { font-family: 'Segoe UI', sans-serif; font-size: 12px; font-weight: 600; fill: #ffffff; }
+      .tab-title { font-family: 'Segoe UI', sans-serif; font-size: 13px; font-weight: 600; }
+      .th { font-family: 'Segoe UI', sans-serif; font-size: 11px; font-weight: 700; fill: #94a3b8; text-transform: uppercase; }
+      .td { font-family: 'Segoe UI', sans-serif; font-size: 12px; fill: #e2e8f0; }
+      .td-sub { font-family: 'Segoe UI', sans-serif; font-size: 10px; fill: #94a3b8; }
+    </style>
+  </defs>
+
+  <!-- Window Container -->
+  <rect width="1000" height="620" rx="8" fill="#1a1c23" stroke="#2d3748" stroke-width="1.5" />
+
+  <!-- Window Titlebar -->
+  <rect width="1000" height="34" rx="8" fill="#13151b" />
+  <rect y="26" width="1000" height="8" fill="#13151b" />
+  <circle cx="20" cy="17" r="5" fill="#ef4444" />
+  <circle cx="36" cy="17" r="5" fill="#f59e0b" />
+  <circle cx="52" cy="17" r="5" fill="#10b981" />
+  <text x="500" y="21" class="win-title" text-anchor="middle">StreamBatch - Media &amp; Batch Download Manager</text>
+
+  <!-- Toolbar -->
+  <g transform="translate(0, 34)">
+    <rect width="1000" height="48" fill="#171920" stroke="#2d3748" stroke-width="1" />
+    
+    <!-- Add URL Button (Primary) -->
+    <rect x="16" y="8" width="165" height="32" rx="6" fill="#0078d4" stroke="#0084ff" />
+    <text x="98" y="28" class="bar-btn" text-anchor="middle">+ Add URL / Playlist</text>
+
+    <!-- Start All Button -->
+    <rect x="190" y="8" width="95" height="32" rx="6" fill="#242936" stroke="#3b4252" />
+    <text x="237" y="28" class="bar-btn" text-anchor="middle">Start All</text>
+
+    <!-- Pause All Button -->
+    <rect x="295" y="8" width="95" height="32" rx="6" fill="#242936" stroke="#3b4252" />
+    <text x="342" y="28" class="bar-btn" text-anchor="middle">Pause All</text>
+
+    <!-- Settings Button -->
+    <rect x="400" y="8" width="90" height="32" rx="6" fill="#242936" stroke="#3b4252" />
+    <text x="445" y="28" class="bar-btn" text-anchor="middle">Settings</text>
+  </g>
+
+  <!-- Tab Bar -->
+  <g transform="translate(16, 92)">
+    <!-- Tab 1 Active -->
+    <rect x="0" y="0" width="130" height="36" rx="6" fill="#1a1c23" stroke="#2d3748" />
+    <rect x="0" y="34" width="130" height="2" fill="#00a8ff" />
+    <text x="65" y="22" class="tab-title" fill="#00a8ff" text-anchor="middle">Active Queue (3)</text>
+
+    <!-- Tab 2 Inactive -->
+    <rect x="135" y="0" width="140" height="36" rx="6" fill="#13151b" />
+    <text x="205" y="22" class="tab-title" fill="#94a3b8" text-anchor="middle">Download History</text>
+  </g>
+
+  <!-- Main Table Header -->
+  <g transform="translate(16, 130)">
+    <rect width="968" height="34" fill="#13151b" stroke="#2d3748" rx="4" />
+    <text x="20" y="21" class="th">Title / Source</text>
+    <text x="410" y="21" class="th">Format</text>
+    <text x="510" y="21" class="th">Progress</text>
+    <text x="730" y="21" class="th">Speed</text>
+    <text x="825" y="21" class="th">ETA</text>
+    <text x="895" y="21" class="th">Status</text>
+  </g>
+
+  <!-- Table Row 1 (Downloading) -->
+  <g transform="translate(16, 168)">
+    <rect width="968" height="64" fill="#181b24" stroke="#232733" />
+    <text x="20" y="28" class="td" font-weight="600">Sufi Qawwali Live Collection - Track 01</text>
+    <text x="20" y="46" class="td-sub">https://example.com/audio/track01 (Playlist: Kalam Album)</text>
+    
+    <text x="410" y="37" class="td">MP3 (320k)</text>
+
+    <!-- Progress Bar -->
+    <rect x="510" y="22" width="190" height="12" rx="3" fill="#1f2430" />
+    <rect x="510" y="22" width="138" height="12" rx="3" fill="#0078d4" />
+    <text x="510" y="48" class="td-sub">72.4% (8.2 MB / 11.3 MB)</text>
+
+    <text x="730" y="37" class="td">2.4 MB/s</text>
+    <text x="825" y="37" class="td">00:02</text>
+
+    <!-- Badge: DOWNLOADING -->
+    <rect x="880" y="20" width="85" height="24" rx="4" fill="#1e3a8a" stroke="#2563eb" />
+    <text x="922" y="36" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="700" fill="#60a5fa" text-anchor="middle">DOWNLOADING</text>
+  </g>
+
+  <!-- Table Row 2 (Converting) -->
+  <g transform="translate(16, 234)">
+    <rect width="968" height="64" fill="#14161d" stroke="#232733" />
+    <text x="20" y="28" class="td" font-weight="600">Traditional Instrumental - Ney Flute Solo</text>
+    <text x="20" y="46" class="td-sub">https://example.com/audio/instrumental</text>
+    
+    <text x="410" y="37" class="td">FLAC (Lossless)</text>
+
+    <!-- Progress Bar (Converting) -->
+    <rect x="510" y="22" width="190" height="12" rx="3" fill="#8b5cf6" />
+    <text x="510" y="48" class="td-sub">Converting audio with FFmpeg...</text>
+
+    <text x="730" y="37" class="td">--</text>
+    <text x="825" y="37" class="td">--</text>
+
+    <!-- Badge: CONVERTING -->
+    <rect x="880" y="20" width="85" height="24" rx="4" fill="#4c1d95" stroke="#7c3aed" />
+    <text x="922" y="36" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="700" fill="#c084fc" text-anchor="middle">CONVERTING</text>
+  </g>
+
+  <!-- Table Row 3 (Queued) -->
+  <g transform="translate(16, 300)">
+    <rect width="968" height="64" fill="#181b24" stroke="#232733" />
+    <text x="20" y="28" class="td" font-weight="600">Educational Lecture Series - Part 03</text>
+    <text x="20" y="46" class="td-sub">https://example.com/audio/lecture03</text>
+    
+    <text x="410" y="37" class="td">M4A (192k)</text>
+
+    <!-- Progress Bar (Queued) -->
+    <rect x="510" y="22" width="190" height="12" rx="3" fill="#1f2430" />
+    <text x="510" y="48" class="td-sub">Waiting for slot...</text>
+
+    <text x="730" y="37" class="td">--</text>
+    <text x="825" y="37" class="td">--</text>
+
+    <!-- Badge: QUEUED -->
+    <rect x="880" y="20" width="85" height="24" rx="4" fill="#374151" stroke="#4b5563" />
+    <text x="922" y="36" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="700" fill="#9ca3af" text-anchor="middle">QUEUED</text>
+  </g>
+
+  <!-- Status Bar -->
+  <g transform="translate(0, 588)">
+    <rect width="1000" height="32" fill="#111318" stroke="#232733" />
+    <text x="20" y="20" class="td-sub" font-weight="600">Active: 1 | Queued: 1 | Completed: 14</text>
+    <text x="320" y="20" class="td-sub">Total Speed: 2.4 MB/s</text>
+    <text x="620" y="20" class="td-sub">Extension Listener: Active (Port 9654)</text>
+    <text x="880" y="20" class="td-sub" fill="#34d399">FFmpeg: Ready</text>
+  </g>
+</svg>

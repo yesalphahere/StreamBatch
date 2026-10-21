@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="100%" height="100%">
+  <defs>
+    <style>
+      .step-num { font-family: 'Segoe UI', sans-serif; font-size: 11px; font-weight: 700; fill: #00a8ff; }
+      .step-title { font-family: 'Segoe UI', sans-serif; font-size: 13px; font-weight: 600; fill: #ffffff; }
+      .step-text { font-family: 'Segoe UI', sans-serif; font-size: 10.5px; fill: #94a3b8; }
+      .card { rx: 8px; fill: #1a1e28; stroke: #2d3748; stroke-width: 1.5px; }
+      .conn { stroke: #0078d4; stroke-width: 2px; stroke-dasharray: 4 3; fill: none; }
+    </style>
+  </defs>
+
+  <rect width="960" height="360" fill="#13151b" rx="10" />
+
+  <!-- Section Header -->
+  <text x="35" y="38" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#ffffff">Execution Lifecycle &amp; Media Pipeline</text>
+  <text x="35" y="56" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8">The end-to-end journey of a media or playlist URL in StreamBatch</text>
+
+  <!-- Step 1 -->
+  <g transform="translate(35, 90)">
+    <rect width="160" height="220" class="card" />
+    <circle cx="28" cy="30" r="12" fill="#1e293b" />
+    <text x="28" y="34" class="step-num" text-anchor="middle">1</text>
+    <text x="48" y="34" class="step-title">Ingestion</text>
+
+    <text x="16" y="70" class="step-text">• Link pasted or sent via</text>
+    <text x="24" y="86" class="step-text">Browser Extension</text>
+    <text x="16" y="112" class="step-text">• Scheme validation</text>
+    <text x="24" y="128" class="step-text">(http:// and https://)</text>
+    <text x="16" y="154" class="step-text">• Duplicate check</text>
+    <text x="24" y="170" class="step-text">against SQLite index</text>
+  </g>
+
+  <!-- Step 2 -->
+  <g transform="translate(220, 90)">
+    <rect width="160" height="220" class="card" />
+    <circle cx="28" cy="30" r="12" fill="#1e293b" />
+    <text x="28" y="34" class="step-num" text-anchor="middle">2</text>
+    <text x="48" y="34" class="step-title">Inspection</text>
+
+    <text x="16" y="70" class="step-text">• Fast shallow extract</text>
+    <text x="24" y="86" class="step-text">via yt-dlp flat parser</text>
+    <text x="16" y="112" class="step-text">• Tracklist &amp; durations</text>
+    <text x="24" y="128" class="step-text">rendered to checklist</text>
+    <text x="16" y="154" class="step-text">• User selects target</text>
+    <text x="24" y="170" class="step-text">tracks &amp; audio bitrate</text>
+  </g>
+
+  <!-- Step 3 -->
+  <g transform="translate(405, 90)">
+    <rect width="160" height="220" class="card" />
+    <circle cx="28" cy="30" r="12" fill="#1e293b" />
+    <text x="28" y="34" class="step-num" text-anchor="middle">3</text>
+    <text x="48" y="34" class="step-title">Queueing</text>
+
+    <text x="16" y="70" class="step-text">• Job IDs stored in DB</text>
+    <text x="24" y="86" class="step-text">with status 'QUEUED'</text>
+    <text x="16" y="112" class="step-text">• ThreadPool scheduler</text>
+    <text x="24" y="128" class="step-text">evaluates slot limits</text>
+    <text x="16" y="154" class="step-text">• Up to max concurrent</text>
+    <text x="24" y="170" class="step-text">workers dispatched</text>
+  </g>
+
+  <!-- Step 4 -->
+  <g transform="translate(590, 90)">
+    <rect width="160" height="220" class="card" />
+    <circle cx="28" cy="30" r="12" fill="#1e293b" />
+    <text x="28" y="34" class="step-num" text-anchor="middle">4</text>
+    <text x="48" y="34" class="step-title">Retrieval</text>
+
+    <text x="16" y="70" class="step-text">• Chunked stream pull</text>
+    <text x="24" y="86" class="step-text">with byte continuation</text>
+    <text x="16" y="112" class="step-text">• 10 Hz throttled speed,</text>
+    <text x="24" y="128" class="step-text">ETA &amp; % signals to GUI</text>
+    <text x="16" y="154" class="step-text">• Responds to user</text>
+    <text x="24" y="170" class="step-text">pause/cancel flags</text>
+  </g>
+
+  <!-- Step 5 -->
+  <g transform="translate(775, 90)">
+    <rect width="150" height="220" class="card" stroke="#10b981" />
+    <circle cx="28" cy="30" r="12" fill="#064e3b" />
+    <text x="28" y="34" class="step-num" fill="#34d399" text-anchor="middle">5</text>
+    <text x="48" y="34" class="step-title" fill="#34d399">Output</text>
+
+    <text x="16" y="70" class="step-text">• FFmpeg converts</text>
+    <text x="24" y="86" class="step-text">to MP3/FLAC/WAV</text>
+    <text x="16" y="112" class="step-text">• Tags &amp; meta embedded</text>
+    <text x="16" y="140" class="step-text">• Database status</text>
+    <text x="24" y="156" class="step-text">marked 'COMPLETED'</text>
+    <text x="16" y="182" class="step-text">• Ready for offline use</text>
+  </g>
+
+  <!-- Connectors -->
+  <line x1="195" y1="200" x2="220" y2="200" class="conn" />
+  <line x1="380" y1="200" x2="405" y2="200" class="conn" />
+  <line x1="565" y1="200" x2="590" y2="200" class="conn" />
+  <line x1="750" y1="200" x2="775" y2="200" class="conn" />
+</svg>

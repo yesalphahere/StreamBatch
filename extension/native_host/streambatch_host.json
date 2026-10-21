@@ -1,0 +1,9 @@
+{
+  "name": "com.streambatch.native_host",
+  "description": "StreamBatch Native Messaging Host Connector",
+  "path": "streambatch_host.bat",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://*/"
+  ]
+}
