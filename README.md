@@ -141,9 +141,6 @@ All 8 tests execute in an ephemeral SQLite database environment without touching
 - **[docs/PRIVACY.md](docs/PRIVACY.md)**: Verification of zero telemetry, local processing, and data retention policies.
 - **[docs/TESTING.md](docs/TESTING.md)**: Test catalog, headless verification commands, and known gaps.
 - **[docs/ROADMAP.md](docs/ROADMAP.md)**: Implemented features vs planned enhancements (speed limiter, subtitles, cover art).
-- **[docs/RELEASE_AUDIT.md](docs/RELEASE_AUDIT.md)**: Pre-release audit of dependencies, licensing, and security boundaries.
-- **[docs/GRAPHICS_GENERATION_PROMPTS.md](docs/GRAPHICS_GENERATION_PROMPTS.md)**: Prompts for reproducing or modifying project graphics.
-
 ---
 
 ## License
